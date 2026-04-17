@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO meta tags are dynamically set by the app from business.json -->
+    <title>אינסטלטור בפתח תקווה עדי אינסטלציה | שירות חירום 24/7</title>
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Preload business data (starts in parallel with JS bundle) -->
+    <script>
+      // Start fetching JSON immediately — before React even loads
+      window.__bizData = fetch('/data/business.json?t=' + Date.now()).then(r => r.json());
+      // Check for edit-mode token in query params (zero-cost for regular users)
+      window.__editToken = new URLSearchParams(location.search).get('edit');
+    </script>
+
+    <!-- Google Fonts (non-render-blocking) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Inter:wght@300;400;500;700;900&display=swap" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet" /></noscript>
+      <meta name="description" content="אינסטלטור מוסמך בפתח תקווה. תיקון דלפות, סתימות, התקנת דוודים. שירות מהיר ומקצועי. 50 ביקורות חמש כוכבים." />
+      <meta name="keywords" content="אינסטלטור פתח תקווה, תיקון צינורות, דלפות, סתימות, אינסטלציה, שירות חירום" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

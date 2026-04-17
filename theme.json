@@ -1,0 +1,10 @@
+{
+  "brand_personality": "direct, reliable, professional",
+  "primary_color": "blue-600",
+  "secondary_color": "orange-600",
+  "hero_gradient": "from-blue-900 via-blue-800 to-blue-950",
+  "contact_gradient": "from-orange-900 via-orange-800 to-orange-950",
+  "font_heading": "Arial, sans-serif",
+  "font_body": "Arial, sans-serif",
+  "font_google_import": ""
+}

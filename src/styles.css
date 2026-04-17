@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+
+/* ─── Root ─── */
+:root {
+  --font-heading: 'Arial, sans-serif', sans-serif;
+  --font-body: 'Arial, sans-serif', sans-serif;
+  --font-he: 'Heebo', 'Arial Hebrew', Arial, sans-serif;
+  --font-en: 'Inter', system-ui, Arial, sans-serif;
+  /* --font-heading and --font-body are injected per-site by the generator */
+  --font-heading: var(--font-en);
+  --font-body: var(--font-en);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+/* ─── Direction-aware font ─── */
+[dir='rtl'] {
+  font-family: var(--font-he);
+}
+[dir='ltr'] {
+  font-family: var(--font-en);
+}
+
+/* ─── Heading font from design system ─── */
+[dir='ltr'] h1,
+[dir='ltr'] h2,
+[dir='ltr'] h3,
+[dir='ltr'] h4 {
+  font-family: var(--font-heading);
+}
+
+/* ─── Global reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-he);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  color: #111827;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ─── Smooth scroll for anchor links ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── WhatsApp FAB pulse ─── */
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.45); }
+  50% { box-shadow: 0 0 0 14px rgba(34, 197, 94, 0); }
+}
+.wa-pulse {
+  animation: wa-pulse 2.2s ease-in-out infinite;
+}
